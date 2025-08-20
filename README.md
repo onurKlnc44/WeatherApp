@@ -1,12 +1,23 @@
-# WeatherApp
+# WeatherApp 🌤️
 
-Bu proje ASP.NET Core MVC kullanılarak yapılmış bir Hava Durumu Uygulamasıdır.
+WeatherApp, **ASP.NET Core MVC** kullanılarak geliştirilmiş bir **hava durumu uygulamasıdır**.  
+Kullanıcılar şehir adı girerek güncel hava durumunu, sıcaklığı, nem ve rüzgar hızını öğrenebilir.
+
+---
 
 ## Özellikler
-- Şehir adı girerek hava durumu öğrenme
-- Sıcaklık, nem ve rüzgar hızı bilgisi
-- Hava durumu ikonları
-- Responsive tasarım (Bootstrap)
 
-## Kurulum ve Kullanım
-1. Bu repo’yu klonla veya indir
+- OpenWeatherMap API kullanılarak gerçek zamanlı hava durumu verisi
+- Şehir adı ile sıcaklık, nem ve rüzgar hızı bilgisi
+- Hava durumu ikonları ile görselleştirilmiş bilgiler
+- Responsive tasarım (Bootstrap ile)
+- Kullanıcı dostu arayüz ve hata mesajları
+
+---
+
+## Kullanım
+
+1. Repo’yu klonla veya indir:
+
+```bash
+git clone https://github.com/onurKlnc44/WeatherApp.git
