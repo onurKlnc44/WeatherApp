@@ -15,9 +15,6 @@ Kullanıcılar şehir adı girerek güncel hava durumunu, sıcaklığı, nem ve 
 
 ---
 
-## Kullanım
+## Fotoğraf
 
-1. Repo’yu klonla veya indir:
-
-```bash
-git clone https://github.com/onurKlnc44/WeatherApp.git
+![Hava Durumu](Weather.img.png)
