@@ -1,0 +1,75 @@
+﻿@model WeatherApp.Models.WeatherModel
+@{
+    ViewData["Title"] = "Hava Durumu";
+}
+
+<style>
+    .card {
+        background: #ffffffcc; /* Opak beyaz, okunaklı */
+        color: #000;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        padding: 20px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        margin-top: 20px;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        }
+
+    .btn-primary {
+        background: #ff7e5f;
+        border: none;
+        transition: background 0.3s;
+    }
+
+        .btn-primary:hover {
+            background: #feb47b;
+        }
+
+    .form-control {
+        border-radius: 50px;
+        border: none;
+    }
+
+    .alert {
+        background-color: #ff4b5c;
+        color: #fff;
+        border: none;
+        margin-top: 15px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+</style>
+
+<h2>Hava Durumu Uygulaması</h2>
+
+<form method="post" class="d-flex justify-content-center mb-4">
+    <input type="text" name="city" class="form-control w-50 me-2" placeholder="Şehir adı" required />
+    <button type="submit" class="btn btn-primary">Getir</button>
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert text-center">@ViewBag.Error</div>
+}
+
+@if (Model != null)
+{
+    <div class="card mx-auto text-center" style="width: 20rem;">
+        <div class="card-body">
+            <h3 class="card-title">@Model.City</h3>
+            <p class="card-text text-capitalize">@Model.Description</p>
+            <p class="card-text">Sıcaklık: <strong>@Model.Temperature °C</strong></p>
+            <p class="card-text">Nem: <strong>@Model.Humidity %</strong></p>
+            <p class="card-text">Rüzgar Hızı: <strong>@Model.WindSpeed m/s</strong></p>
+            <img src="@( "http://openweathermap.org/img/wn/" + Model.Icon + "@2x.png" )" alt="Icon" class="img-fluid" />
+        </div>
+    </div>
+}
